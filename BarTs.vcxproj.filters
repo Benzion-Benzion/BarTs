@@ -42,9 +42,6 @@
     <ClInclude Include="COpenCVProcess.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Dib.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="nifti_clib\niftilib\nifti1.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -52,6 +49,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="nifti_clib\znzlib\znzlib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Dib.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CColorButton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CGoldSlider.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,13 +80,19 @@
     <ClCompile Include="COpenCVProcess.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Dib.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="nifti_clib\niftilib\nifti1_io.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="nifti_clib\znzlib\znzlib.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Dib.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CColorButton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CGoldSlider.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -102,6 +114,18 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\logo_single.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\logo_single.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\icon2.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

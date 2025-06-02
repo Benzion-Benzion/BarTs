@@ -16,6 +16,7 @@
 #define new DEBUG_NEW
 #endif
 
+bool LightAll = false;
 
 // CBarTsApp
 
@@ -26,6 +27,7 @@ BEGIN_MESSAGE_MAP(CBarTsApp, CWinApp)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 	// 标准打印设置命令
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinApp::OnFilePrintSetup)
+	ON_COMMAND(ID_FILE_OPENNIFTI, &CBarTsApp::OnFileOpennifti)
 END_MESSAGE_MAP()
 
 
@@ -169,6 +171,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
+
 END_MESSAGE_MAP()
 
 // 用于运行对话框的应用程序命令
@@ -180,5 +183,22 @@ void CBarTsApp::OnAppAbout()
 
 // CBarTsApp 消息处理程序
 
+void CBarTsApp::OnFileOpennifti()
+{
+	// TODO: 在此添加命令处理程序代码
+	CFileDialog dlg(TRUE, _T("nii"), NULL, OFN_FILEMUSTEXIST,
+		_T("NIfTI Files (*.nii;*.nii.gz)|*.nii;*.nii.gz||"));
+	if (dlg.DoModal() == IDOK)
+	{
+		POSITION pos = GetFirstDocTemplatePosition();
+		CDocTemplate* pTemplate = GetNextDocTemplate(pos);
+		CDocument* pDoc = pTemplate->OpenDocumentFile(NULL);
+		if (!pDoc) return;
 
-
+		CBarTsDoc* doc = DYNAMIC_DOWNCAST(CBarTsDoc, pDoc);
+		if (doc->LoadNiftiFile(dlg.GetPathName()))
+		{
+			doc->UpdateAllViews(NULL);
+		}
+	}
+}

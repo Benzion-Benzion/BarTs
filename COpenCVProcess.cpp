@@ -134,3 +134,5 @@ void COpenCVProcess::Mat2Dib(CDib& dib)
 		}
 	}
 }
+
+

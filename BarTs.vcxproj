@@ -200,11 +200,14 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="CColorButton.h" />
+    <ClInclude Include="CGoldSlider.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BarTs.cpp" />
     <ClCompile Include="BarTsDoc.cpp" />
     <ClCompile Include="BarTsView.cpp" />
+    <ClCompile Include="CColorButton.cpp" />
     <ClCompile Include="COpenCVProcess.cpp" />
     <ClCompile Include="Dib.cpp" />
     <ClCompile Include="MainFrm.cpp" />
@@ -220,6 +223,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="CGoldSlider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BarTs.rc" />
@@ -230,6 +234,10 @@
   <ItemGroup>
     <Image Include="res\BarTs.ico" />
     <Image Include="res\BarTsDoc.ico" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\icon2.ico" />
+    <Image Include="res\logo_single.ico" />
+    <Image Include="res\logo_single.png" />
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
